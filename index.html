@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mustafa Yehia CV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- إضافة Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!-- إضافة Animate.css -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url(memento-media-2pPw5Glro5I-unsplash.jpg); /* إضافة خلفية */
+      background-size: cover;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #2C3E50;
+      padding-top: 20px;
+      position: fixed;
+      height: 100%;
+    }
+
+    .sidebar img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 20px auto;
+      display: block;
+      cursor: pointer;
+    }
+
+    .sidebar a {
+      padding: 15px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #1ABC9C;
+    }
+
+    /* Social Icons */
+    .social-icons {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+
+    .social-icons a {
+      color: white;
+      margin-right: 10px;
+      font-size: 50px; /* زيادة حجم الأيقونات */
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #1ABC9C;
+    }
+
+    /* Main Content */
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+    }
+
+    .header {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .header h1 {
+      font-size: 4em;
+    }
+
+    .header h2 {
+      font-size: 3em;
+      color: #080808;
+    }
+    
+
+    .download-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #067786;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .download-btn:hover {
+      background-color: #16a085;
+    }
+
+    /* Pop-up */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 2;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      width: 30%; /* تقليل حجم النافذة المنبثقة */
+    }
+
+    .popup img {
+      width: 100%; /* الصورة تحتل النافذة بالكامل */
+      border-radius: 10px;
+    }
+
+    /* Button to open pop-up */
+    .sidebar a.popup-link {
+      cursor: pointer;
+    }
+
+    /* Close Button */
+    .close-btn {
+      color: red;
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: darkred;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <img src="WhatsApp Image 2024-10-08 at 6.35.42 PM.jpeg" alt="Profile Picture" onclick="showPopup('profile-popup')">
+
+      <!-- Navigation Links -->
+      <a href="#" class="popup-link" onclick="showPopup('about-popup')">About Me</a>
+      <a href="#" class="popup-link" onclick="showPopup('objective-popup')">Objective</a>
+      <a href="#" class="popup-link" onclick="showPopup('education-popup')">Education</a>
+      <a href="#" class="popup-link" onclick="showPopup('courses-popup')">Courses</a>
+      <a href="#" class="popup-link" onclick="showPopup('training-popup')">Training</a>
+      <a href="#" class="popup-link" onclick="showPopup('experience-popup')">Experience</a>
+      <a href="#" class="popup-link" onclick="showPopup('languages-popup')">Language Skills</a>
+      <a href="#" class="popup-link" onclick="showPopup('skills-popup')">Personal Skills</a>
+
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=100015663274956&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/mustafa-yehia-b449962a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/musta44667" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <div class="header">
+        <h1>Hello, I'm Mustafa Yehia</h1>
+        <p>
+        <p>
+
+        <h2>Accountant</h2>
+
+
+        <a href="my-cv.pdf.pdf" class="download-btn" download>Download My CV</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pop-up Modals -->
+  <div id="profile-popup" class="popup">
+    <span class="close-btn" onclick="closePopup('profile-popup')">&times;</span>
+    <h3>Profile Picture</h3>
+    <img src="WhatsApp Image 2024-10-08 at 6.35.42 PM.jpeg" alt="Profile Picture">
+  </div>
+
+  <div id="about-popup" class="popup">
+    <span class="close-btn" onclick="closePopup('about-popup')">&times;</span>
+    <h3>About Me</h3>
+    <p>I am a passionate individual with a strong desire to succeed in my professional life. With a background in accounting and experience in various roles, I am determined to leverage my skills and knowledge to contribute effectively in my workplace. I have worked in various managerial and accounting positions, gaining extensive knowledge in business operations and financial management.</p>
+    <p><strong>Email:</strong> mustafa.yehia.awni@gmail.com</p>
+    <p><strong>Phone:</strong> +20 1005265764</p>
+    <p><strong>Address:</strong> Beni Suef, Egypt</p>
+  </div>
+
+  <div id="objective-popup" class="popup">
+    <span class="close-btn" onclick="closePopup('objective-popup')">&times;</span>
+    <h3>Objective</h3>
+    <p>To leverage my skills in accounting and financial analysis to contribute to organizational success.</p>
+  </div>
+
+  <div id="education-popup" class="popup">
+    <span class="close-btn" onclick="closePopup('education-popup')">&times;</span>
+    <h3>Education</h3>
+    <p>Bachelor of Commerce, Beni Suef University – Accounting Department (2021) - Grade: Good</p>
+  </div>
+
+  <div id="courses-popup" class="popup">
+    <span class="close-btn" onclick="closePopup('courses-popup')">&times;</span>
+    <h3>Courses</h3>
+    <p>PFA (online).</p>
+    <p>IC3 Course at Beni Suef University</p>
+    <p>Soft Skills (online)</p>
+    <p>Microsoft Office Specialist</p>
+  </div>
+
+  <div id="training-popup" class="popup">
+    <span class="close-btn" onclick="closePopup('training-popup')">&times;</span>
+    <h3>Training</h3>
+    <p>Banque Mir (Online),Completed professional training in accounting software, financial management, and cyber security.</p>
+  </div>
+
+  <div id="experience-popup" class="popup">
+    <span class="close-btn" onclick="closePopup('experience-popup')">&times;</span>
+    <h3>Experience</h3>
+    <p>Storekeeper Manager at Premix Ready-Mix Concrete Company (2018 - 2019).</p>
+    <p>Storekeeper Manager at New Sharm Ready-Mix Concrete and Construction Company (2019 - 2021)</p>
+    <p>Accountant at Jenin Construction Company (2021 - 2022)</p>
+    <p>Currently working as an Accountant at Future Ready-Mix Concrete Company</p>
+    <p>Proficient in using Al-Amin Accounting Software for Business Solutions</p>
+  </div>
+
+  <div id="languages-popup" class="popup">
+    <span class="close-btn" onclick="closePopup('languages-popup')">&times;</span>
+    <h3>Language Skills</h3>
+    <p>Fluent in Arabic and good in English.</p>
+  </div>
+
+  <div id="skills-popup" class="popup">
+    <span class="close-btn" onclick="closePopup('skills-popup')">&times;</span>
+    <h3>Computer Skills</h3>
+    <p>
+    <p>Very good user of Microsoft Office (Word, Excel, PowerPoint, Outlook)</p>
+    <p>Proficient in using the internet for research</p>
+    <p>
+   <h3>Personal Skills</h3>
+   <p>
+    <p>Time management</p>
+    <p>Self-motivation</p>
+    <p>Good communication</p>
+    <p>Teamwork</p>
+  </div>
+
+  <!-- صوت عند فتح النافذة المنبثقة -->
+  <audio id="popup-sound" src="Mouse Click Sound Effect.mp3"></audio> <!-- تأكد من وضع رابط صحيح لملف الصوت -->
+
+  <script>
+    // Function to show the selected popup and close others
+    function showPopup(id) {
+      // Close all other popups
+      var popups = document.getElementsByClassName('popup');
+      for (var i = 0; i < popups.length; i++) {
+        popups[i].style.display = 'none';
+      }
+      // Show the selected popup
+      document.getElementById(id).style.display = 'block';
+      
+      // تشغيل الصوت عند فتح النافذة
+      document.getElementById('popup-sound').play();
+    }
+
+    // Function to close the popup
+    function closePopup(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+</body>
+</html>
